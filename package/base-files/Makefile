@@ -153,8 +153,8 @@ define Package/base-files/install
 	mkdir -p $(1)/usr/bin
 	mkdir -p $(1)/sys
 	mkdir -p $(1)/www
-	mkdir -p $(1)/lighttpd-www
-	mkdir -p $(1)/lighttpd-www/cgi-bin
+	mkdir -p $(1)/pupa-www
+	mkdir -p $(1)/pupa-www/cgi-bin
 	mkdir -p $(1)/root
 	$(LN) /proc/mounts $(1)/etc/mtab
 	rm -f $(1)/var
