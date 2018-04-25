@@ -1,5 +1,5 @@
 config system
-	option hostname	ZhuoTK
+	option hostname	PUPA
 	option timezone	UTC
 
 config timeserver ntp
