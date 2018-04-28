@@ -168,7 +168,7 @@ CountryRegion=${countryregion:-0}
 CountryRegionABand=7
 CountryCode=${country:-US}
 BssidNum=${ssid_num:-1}
-SSID1=${ssid1:-ZhuoTK}
+SSID1=${ssid1:-PUPA}
 SSID2=
 SSID3=
 SSID4=
@@ -633,7 +633,7 @@ config wifi-iface
 	option device   ra${i}
 	option network	'lan'
 	option mode     'ap'
-	option ssid     ZhuoTK_${i#0}$(cat /sys/class/net/eth0/address|awk -F ":" '{print $5""$6 }'| tr a-z A-Z)
+	option ssid     PUPA_${i#0}$(cat /sys/class/net/eth0/address|awk -F ":" '{print $5""$6 }'| tr a-z A-Z)
 	option encryption 'none'
         option ApCliEnable '1'
         option ApCliSsid 'aAP'
