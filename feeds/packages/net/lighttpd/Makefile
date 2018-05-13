@@ -144,6 +144,8 @@ define BuildPlugin
 		if [ "$(1)" = "cgi" ]; then \
 			echo "ljd modify lighttpd cgi.conf" ; \
 			sed -i '28,30s/^#//' $$(1)/etc/lighttpd/conf.d/$(4)-$(1).conf ; \
+			sed -i '28s/cgi-bin//' $$(1)/etc/lighttpd/conf.d/$(4)-$(1).conf ; \
+			sed -i '29s|= ( "" => "" )|= ( "*.cgp" => "" )|'  $$(1)/etc/lighttpd/conf.d/$(4)-$(1).conf ; \
 		fi \
 	else \
 		echo 'server.modules += ( "mod_$(1)" )' > $$(1)/etc/lighttpd/conf.d/$(4)-$(1).conf ; \
