@@ -493,7 +493,7 @@ enable_ralink() {
 		
 		iwpriv ra0 set SiteSurvey=1 
 
-		sleep 1
+		sleep 3
 			
 		apcli_channel=0
 		now_rssi=0

@@ -1,0 +1,18 @@
+char * index;
+	memcpy(str, query_string, strlen(query_string)+1);
+	int i=0;
+	char * get[100];
+
+	while(NULL != (index = strchr(str, '&' ))){
+		//printf("%s\n", index);
+		get[i] = (char *)malloc(index-str + 1);
+		strncpy(get[i++], str, index - str);
+		strncpy(str, index + 1, strlen(str)-(index-str) + 1);
+	}
+	
+	get[i] = (char*)malloc(strlen(str)+1);
+	strncpy(get[i++], str, strlen(str)+1);
+	for(int m=0; m<i; m++){
+		printf("%s\n", get[m]);
+		
+	free(get[m]);

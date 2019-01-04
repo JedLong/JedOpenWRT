@@ -1,0 +1,11 @@
+set env REQUEST_METHOD GET
+set env QUERY_STRING cgif=devices&opt=list&function=get
+
+set env REQUEST_METHOD GET
+set env QUERY_STRING cgif=temp_sensor&opt=allinfo&deviceid=23&function=get
+
+$8 = (cJSON *) 0x609600
+(gdb) p *response
+$9 = {next = 0x0, prev = 0x0, child = 0x609650, type = 6, valuestring = 0x0, valueint = 0, valuedouble = 0, string = 0x0}
+(gdb) p *response->child
+$10 = {next = 0x0, prev = 0x0, child = 0x6096a0, type = 5, valuestring = 0x0, valueint = 0, valuedouble = 0, string = 0x609dd0 "devices"}
